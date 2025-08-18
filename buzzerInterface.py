@@ -33,9 +33,9 @@ def buzzer_pressed(pos):
     print("Buzzer wurde gedrückt!")
     sioLocal.emit("buzzerPressed", pos)
 
-buzzerL.when_pressed = buzzer_pressed(0)
-buzzerM.when_pressed = buzzer_pressed(1)
-buzzerR.when_pressed = buzzer_pressed(2)
+buzzerL.when_pressed = lambda: buzzer_pressed(0)
+buzzerM.when_pressed = lambda: buzzer_pressed(1)
+buzzerR.when_pressed = lambda: buzzer_pressed(2)
 
 
 print("Buzzer wartet auf Betätigung...")
