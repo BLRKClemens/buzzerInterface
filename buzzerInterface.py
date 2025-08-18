@@ -20,7 +20,7 @@ def on_message(data):
     print('Nachricht vom local Server:', data)
 
 # Verbinde zum Socket.IO Server
-sioLocal.connect("http://localhost:3000")
+sioLocal.connect("http://desktop-ffm2plr:3001")
 
 
 
