@@ -25,8 +25,8 @@ sioLocal.connect("http://192.168.11.56:3001")
 
 
 buzzerL = Button(7,bounce_time=0.05) 
-buzzerM = Button(9,bounce_time=0.05) 
-buzzerR = Button(24,bounce_time=0.05) 
+buzzerM = Button(24,bounce_time=0.05) 
+buzzerR = Button(9,bounce_time=0.05) 
 
 
 def buzzer_pressed(pos):
