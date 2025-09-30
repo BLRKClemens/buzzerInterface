@@ -24,18 +24,16 @@ sioLocal.connect("http://192.168.11.56:3001")
 
 
 
-buzzerL = Button(7,bounce_time=0.05) 
-buzzerM = Button(24,bounce_time=0.05) 
-buzzerR = Button(9,bounce_time=0.05) 
+buzzer0 = Button(24,bounce_time=0.05) 
+buzzer1 = Button(9,bounce_time=0.05) 
 
 
 def buzzer_pressed(pos):
     print("Buzzer wurde gedrückt!", pos)
     sioLocal.emit("buzzerPressed", pos)
 
-buzzerL.when_pressed = lambda: buzzer_pressed(0)
-buzzerM.when_pressed = lambda: buzzer_pressed(1)
-buzzerR.when_pressed = lambda: buzzer_pressed(2)
+buzzer0.when_pressed = lambda: buzzer_pressed(0)
+buzzer1.when_pressed = lambda: buzzer_pressed(1)
 
 
 print("Buzzer wartet auf Betätigung...")
